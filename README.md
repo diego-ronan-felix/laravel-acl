@@ -12,7 +12,7 @@ Este repositório contém um setup básico para rodar um projeto Laravel 11 util
 ### Passo 1: Clonar o Repositório
 
 ```sh
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/diego-ronan-felix/setup-laravel11-docker.git
 ```
 
 ### Passo 2: Acessar o projeto e subir os contêineres 
