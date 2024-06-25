@@ -28,7 +28,7 @@ docker-compose up -d
 cp .env.example .env
 ```
 
-### Passo 4: Adicionar os dados de configuração no .env
+### Passo 4: Adicionar as variáveis de ambiente no .env
 
 ```sh
 APP_NAME="Nome que você desejar"
@@ -49,3 +49,29 @@ REDIS_PORT=6379
 MINIO_ROOT_USER=seu_usuario_para_o_minio
 MINIO_ROOT_PASSWORD=sua_senha_para_o_minio
 ```
+
+### Passo 5: Acessar o container da aplicação
+
+```sh
+docker-compose exec app bash
+```
+
+### Passo 6: Instalar as dependências do projeto
+
+```sh
+composer install
+```
+
+### Passo 7: Gerar a key do projeto laravel
+
+```sh
+php artisan key:generate
+```
+
+### Passo 8: Rodar as migrations 
+
+```sh
+php artisan migrate
+```
+
+
