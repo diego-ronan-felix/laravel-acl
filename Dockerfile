@@ -1,9 +1,5 @@
 FROM php:8.3-fpm
 
-# set your user name, ex: user=carlos
-ARG user=diegoronan
-ARG uid=1000
-
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
