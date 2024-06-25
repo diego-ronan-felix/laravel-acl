@@ -14,9 +14,11 @@ Este repositório contém um setup básico para rodar um projeto Laravel 11 util
 ```sh
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
+```
 
 ### Passo 2: Acessar o projeto e subir os contêineres 
 
 ```sh
 cd seu-repositorio
 docker-compose up -d
+```
