@@ -49,37 +49,43 @@ MINIO_ROOT_USER=seu_usuario_para_o_minio
 MINIO_ROOT_PASSWORD=sua_senha_para_o_minio
 ```
 
-### Passo 5: Subir os contêineres 
+### Passo 5: Altere o nome de usuário no arquivo Dockerfile (Opcional) 
+
+```sh
+ARG user=seuusername
+```
+
+### Passo 6: Subir os contêineres 
 
 ```sh
 docker-compose up -d
 ```
 
-### Passo 6: Acessar o container da aplicação
+### Passo 7: Acessar o container da aplicação
 
 ```sh
 docker-compose exec app bash
 ```
 
-### Passo 7: Instalar as dependências do projeto
+### Passo 8: Instalar as dependências do projeto
 
 ```sh
 composer install
 ```
 
-### Passo 8: Gerar a key do projeto laravel
+### Passo 9: Gerar a key do projeto laravel
 
 ```sh
 php artisan key:generate
 ```
 
-### Passo 9: Rodar as migrations 
+### Passo 10: Rodar as migrations 
 
 ```sh
 php artisan migrate
 ```
 
-### Passo 10: Acessar a aplicação, o mailpit e minio no browser
+### Passo 11: Acessar a aplicação, o mailpit e minio no browser
 
 ```sh
 localhost
