@@ -74,4 +74,12 @@ php artisan key:generate
 php artisan migrate
 ```
 
+### Passo 9: Acessar a aplicação, o mailpit e minio no browser
+
+```sh
+localhost
+localhost:8025
+localhost:9000
+```
+
 
