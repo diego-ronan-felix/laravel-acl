@@ -84,7 +84,7 @@ php artisan migrate
 ```sh
 localhost
 localhost:8025
-localhost:9000
+localhost:9001
 ```
 
 
