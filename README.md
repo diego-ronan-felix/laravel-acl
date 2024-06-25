@@ -15,11 +15,10 @@ Este repositório contém um setup básico para rodar um projeto Laravel 11 util
 git clone https://github.com/diego-ronan-felix/setup-laravel11-docker.git
 ```
 
-### Passo 2: Acessar o projeto e subir os contêineres 
+### Passo 2: Acessar o projeto
 
 ```sh
 cd setup-laravel11-docker
-docker-compose up -d
 ```
 
 ### Passo 3: Gerar o arquivo .env
@@ -50,31 +49,37 @@ MINIO_ROOT_USER=seu_usuario_para_o_minio
 MINIO_ROOT_PASSWORD=sua_senha_para_o_minio
 ```
 
-### Passo 5: Acessar o container da aplicação
+### Passo 5: Subir os contêineres 
+
+```sh
+docker-compose up -d
+```
+
+### Passo 6: Acessar o container da aplicação
 
 ```sh
 docker-compose exec app bash
 ```
 
-### Passo 6: Instalar as dependências do projeto
+### Passo 7: Instalar as dependências do projeto
 
 ```sh
 composer install
 ```
 
-### Passo 7: Gerar a key do projeto laravel
+### Passo 8: Gerar a key do projeto laravel
 
 ```sh
 php artisan key:generate
 ```
 
-### Passo 8: Rodar as migrations 
+### Passo 9: Rodar as migrations 
 
 ```sh
 php artisan migrate
 ```
 
-### Passo 9: Acessar a aplicação, o mailpit e minio no browser
+### Passo 10: Acessar a aplicação, o mailpit e minio no browser
 
 ```sh
 localhost
