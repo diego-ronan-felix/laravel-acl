@@ -35,7 +35,7 @@ services:
         volumes:
             - ./.docker/mysql/dbdata:/var/lib/mysql
         ports:
-            - "3301:3306"
+            - "3306:3306"
         networks:
             - laravel11
     # redis
