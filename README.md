@@ -52,7 +52,7 @@ MINIO_ROOT_PASSWORD=sua_senha_para_o_minio
 ### Passo 5: Altere o nome de usuário no arquivo Dockerfile (Opcional) 
 
 ```sh
-ARG user=seuusername
+ARG permission=seuusername
 ```
 
 ### Passo 6: Subir os contêineres 
