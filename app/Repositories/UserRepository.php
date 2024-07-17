@@ -15,7 +15,7 @@ class UserRepository
 
     public function getPaginate(int $totalPerPage = 15, int $page = 1, string $filter = ''): LengthAwarePaginator
     {
-        return $this->permission->where(function ($query) use ($filter) {
+        return $this->user->where(function ($query) use ($filter) {
             if($filter != '') {
                 $query->where('name', 'LIKE', "%{$filter}%");
             }
@@ -26,12 +26,17 @@ class UserRepository
     {
         $data = (array) $dto;
         $data['password'] = bcrypt($data['password']);
-        return $this->permission->create($data);
+        return $this->user->create($data);
     }
 
     public function findById(string $id): ?User
     {
         return $this->user->find($id);
+    }
+
+    public function findByEmail(string $email): ?User
+    {
+        return $this->user->where('email', $email)->first();
     }
 
     public function update(EditUserDTO $dto): bool
